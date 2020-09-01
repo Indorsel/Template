@@ -1,8 +1,8 @@
 .square {
-    width: 90px;
-    height: 90px;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin: 2px;
-  }
+  width: 90px;
+  height: 90px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 2px;
+}
