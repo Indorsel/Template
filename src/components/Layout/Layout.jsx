@@ -13,7 +13,6 @@ export class Layout extends React.Component {
       emptySquare: 'Click for x-mark',
       list: [],
     }
-    this.leftClickHandler = this.leftClickHandler.bind(this)
     this.gCellsSize = this.gCellsSize.bind(this)
   }
   
