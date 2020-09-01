@@ -10,6 +10,7 @@ export class StartGame extends React.Component {
     }
     this.inputValue = this.inputValue.bind(this)
     this.generateField = this.generateField.bind(this)
+    this.enterKeyPress = this.enterKeyPress.bind(this)
   }
 
   inputValue(e) {
@@ -26,12 +27,19 @@ export class StartGame extends React.Component {
     }
   }
 
+  enterKeyPress(e) {
+    if(e.key === 'Enter') {
+      this.generateField()
+    }
+  } 
+
   render() {
     return (
       <div className="inputHolder" status={this.state.gameStatus}>
         <input
           onChange={this.inputValue}
           placeholder="Введите число от 1 до 10"
+          onKeyPress={this.enterKeyPress}
         />
         <button onClick={this.generateField}>Начать игру</button>
       </div>
