@@ -1,7 +1,7 @@
 .reset {
   position: fixed;
-  left: 90%;
-  top: 4px;
+  left: 49%;
+  top: 8.2%;
   font-size: 18px;
   line-height: 18px;
   font-weight: bold;
@@ -10,7 +10,7 @@
   color: white;
   padding: 0 5px;
 }
-
+  
 .reset:hover {
   cursor: pointer;
   background-color: red;

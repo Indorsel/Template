@@ -6,3 +6,11 @@
   border-radius: 10px;
   margin: 2px;
 }
+
+.close {
+  background-image: url('../../icons/close.svg');
+}
+
+.circle {
+  background-image: url('../../icons/circle.svg');
+}

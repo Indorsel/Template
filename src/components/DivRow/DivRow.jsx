@@ -13,9 +13,14 @@ export class DivRow extends React.Component {
     return (
       <div className="row">
         {this.props.list.map((number) => (
-          <Square rowNumber={number} key={number} />
+          <Square
+            rowNumber={number}
+            key={number}
+            counterFunc={this.props.counterFunc}
+            counter={this.props.counter}
+          />
         ))}
       </div>
-    )
+    );
   }
 }
