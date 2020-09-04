@@ -1,0 +1,17 @@
+.reset {
+  position: fixed;
+  left: 90%;
+  top: 4px;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+  border: 1px solid gray;
+  background-color: black;
+  color: white;
+  padding: 0 5px;
+}
+
+.reset:hover {
+  cursor: pointer;
+  background-color: red;
+}
