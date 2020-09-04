@@ -1,16 +1,16 @@
 .square {
-    width: 90px;
-    height: 90px;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin: 2px;
-  }
+  width: 90px;
+  height: 90px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 2px;
+}
 
-  .close {
-    background-image: url('../../icons/close.svg');
-  }
+.close {
+  background-image: url('../../icons/close.svg');
+}
 
-  .circle {
-    background-image: url('../../icons/circle.svg');
-  }
+.circle {
+  background-image: url('../../icons/circle.svg');
+}

@@ -2,6 +2,7 @@ import React from "react"
 import { Square } from "../Square/Square"
 import "./index.css"
 
+
 export class DivRow extends React.Component {
   constructor(props) {
     super(props)
