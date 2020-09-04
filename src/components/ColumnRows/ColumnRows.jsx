@@ -10,8 +10,7 @@ export class ColumnRows extends React.Component {
     this.setCounterOfClicks = this.setCounterOfClicks.bind(this)
   }
 
-  setCounterOfClicks(num) {
-    let counter = num
+  setCounterOfClicks(counter) {
     this.setState({ counter })
   }
 
