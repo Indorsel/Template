@@ -10,7 +10,6 @@ export class StartGame extends React.Component {
     }
     this.inputValue = this.inputValue.bind(this)
     this.generateField = this.generateField.bind(this)
-    // this.enterKeyPress = this.enterKeyPress.bind(this)
     this.enterFunction = this.enterFunction.bind(this)
   }
 
