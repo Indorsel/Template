@@ -2,8 +2,8 @@ import React from "react"
 import createArray from "../../utilites/createArray"
 import { ResetButton } from "../ResetButton/ResetButton"
 import { ColumnRows } from "../ColumnRows/ColumnRows"
-import { StartGame } from "../StartGame/StartGame"
 import "./index.css"
+import StartGame from "../../containers/StartGameContainer"
 
 export class Layout extends React.Component {
   constructor(props) {

@@ -1,27 +1,26 @@
 import React from "react"
 import "./index.css"
+// import PropTypes from 'prop-types'
 
 export class StartGame extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      sizeValue: "0",
-      gameStatus: "false",
-    }
     this.inputValue = this.inputValue.bind(this)
     this.generateField = this.generateField.bind(this)
     this.enterFunction = this.enterFunction.bind(this)
   }
 
   inputValue(e) {
-    this.setState({ sizeValue: e.target.value })
+    debugger
+    this.props.setSizeValue(e.target.value)
   }
 
   generateField() {
-    if (this.state.sizeValue < 3 || this.state.sizeValue > 10) {
+    const { sizeValue } = this.props
+    if (sizeValue < 3 || sizeValue > 10) {
       alert("Введите число от 3 до 10")
-    } else if (this.state.sizeValue >= 3 && this.state.sizeValue <= 10) {
-      this.props.callback(this.state.sizeValue)
+    } else if (sizeValue >= 3 && sizeValue <= 10) {
+      this.props.callback(sizeValue)
     } else {
       alert("Ошибка")
     }
@@ -43,7 +42,7 @@ export class StartGame extends React.Component {
 
   render() {
     return (
-      <div className="inputHolder" status={this.state.gameStatus}>
+      <div className="inputHolder">
         <input
           onChange={this.inputValue}
           placeholder="Введите число от 3 до 10"
