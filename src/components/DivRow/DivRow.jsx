@@ -1,17 +1,18 @@
 import React from "react"
+import { connect } from "react-redux"
 import { Square } from "../Square/Square"
 import "./index.css"
 
-export class DivRow extends React.Component {
+class DivRow extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {}
   }
 
   render() {
+    const { list } = this.props
     return (
       <div className="row">
-        {this.props.list.map((number) => (
+        { list.map((number) => (
           <Square
             rowNumber={number}
             key={number}
@@ -23,3 +24,9 @@ export class DivRow extends React.Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  list: state.layout.list,
+})
+
+export default connect(mapStateToProps)(DivRow)

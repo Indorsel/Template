@@ -1,7 +1,8 @@
 import React from "react"
-import { DivRow } from "../DivRow/DivRow"
+import { connect } from "react-redux"
+import DivRow from "../DivRow/DivRow"
 
-export class ColumnRows extends React.Component {
+class ColumnRows extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -15,13 +16,13 @@ export class ColumnRows extends React.Component {
   }
 
   render() {
+    const { list } = this.props
     return (
       <div>
-        {this.props.list.map((number) => (
+        { list.map((number) => (
           <DivRow
             rowNumber={number}
             key={number}
-            list={this.props.list}
             counterFunc={this.setCounterOfClicks}
             counter={this.state.counter}
           />
@@ -30,3 +31,9 @@ export class ColumnRows extends React.Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  list: state.layout.list,
+})
+
+export default connect(mapStateToProps)(ColumnRows)

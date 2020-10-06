@@ -1,37 +1,39 @@
 import React from "react"
 import createArray from "../../utilites/createArray"
 import { ResetButton } from "../ResetButton/ResetButton"
-import { ColumnRows } from "../ColumnRows/ColumnRows"
+import ColumnRows from "../ColumnRows/ColumnRows"
 import "./index.css"
 import StartGame from "../../containers/StartGameContainer"
+import PropTypes from 'prop-types'
 
 export class Layout extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      emptySquare: "Click for x-mark",
-      list: [],
-    }
     this.gCellsSize = this.gCellsSize.bind(this)
   }
 
   gCellsSize(num) {
     const list = createArray(num)
-    this.setState({ list })
+    this.props.setList(list)
   }
 
   render() {
+    const { list } = this.props
     return (
       <div className="main">
         <h1>Игра "Крестики-Нолики"</h1>
-        {this.state.list.length ? 
+        { list.length ? 
         ( <div className="wrapper">
             <ResetButton callback={this.gCellsSize} />
-            <ColumnRows list={this.state.list} />
+            <ColumnRows />
           </div>
         ) : <StartGame callback={this.gCellsSize} />
         }
       </div>
     )
   }
+}
+
+Layout.propTypes = {
+  list: PropTypes.array.isRequired,
 }

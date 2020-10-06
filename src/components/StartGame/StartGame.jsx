@@ -1,6 +1,5 @@
 import React from "react"
 import "./index.css"
-// import PropTypes from 'prop-types'
 
 export class StartGame extends React.Component {
   constructor(props) {
@@ -11,7 +10,6 @@ export class StartGame extends React.Component {
   }
 
   inputValue(e) {
-    debugger
     this.props.setSizeValue(e.target.value)
   }
 
