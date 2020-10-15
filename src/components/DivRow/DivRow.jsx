@@ -1,6 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
-import { Square } from "../Square/Square"
+import Square from "../../containers/SquareContainer"
 import "./index.css"
 
 class DivRow extends React.Component {
@@ -17,7 +17,6 @@ class DivRow extends React.Component {
             rowNumber={number}
             key={number}
             counterFunc={this.props.counterFunc}
-            counter={this.props.counter}
           />
         ))}
       </div>

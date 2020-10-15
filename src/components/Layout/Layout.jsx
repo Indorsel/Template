@@ -1,7 +1,7 @@
 import React from "react"
 import createArray from "../../utilites/createArray"
 import { ResetButton } from "../ResetButton/ResetButton"
-import ColumnRows from "../ColumnRows/ColumnRows"
+import ColumnRows from "../../containers/ColumnRowsContainer"
 import "./index.css"
 import StartGame from "../../containers/StartGameContainer"
 import PropTypes from 'prop-types'

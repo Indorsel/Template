@@ -15,9 +15,9 @@ export class StartGame extends React.Component {
 
   generateField() {
     const { sizeValue } = this.props
-    if (sizeValue < 3 || sizeValue > 10) {
-      alert("Введите число от 3 до 10")
-    } else if (sizeValue >= 3 && sizeValue <= 10) {
+    if (sizeValue < 3 || sizeValue > 6) {
+      alert("Введите число от 3 до 6")
+    } else if (sizeValue >= 3 && sizeValue <= 6) {
       this.props.callback(sizeValue)
     } else {
       alert("Ошибка")
@@ -43,7 +43,7 @@ export class StartGame extends React.Component {
       <div className="inputHolder">
         <input
           onChange={this.inputValue}
-          placeholder="Введите число от 3 до 10"
+          placeholder="Введите число от 3 до 6"
         />
         <button onClick={this.generateField}>Начать игру</button>
       </div>
